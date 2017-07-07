@@ -1,0 +1,28 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+
+   "browser_action": {
+      "default_icon": "images/logo_128.png"
+   },
+
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "assets/iciba.css", "assets/lib/font-awesome/css/font-awesome.css", "assets/content.css" ],
+      "js": [ "assets/lib/jquery.js", "assets/iciba.js", "assets/lib/howler.js", "assets/dict.js", "assets/content.js" ],
+      "matches": [ "*://*/*" ]
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; media-src https:; object-src 'self'",
+   "description": "A simple dictionary widget copy from iciba....",
+   "icons": {
+      "128": "images/logo_128.png",
+      "16": "images/logo_16.png",
+      "48": "images/logo_48.png"
+   },
+   "manifest_version": 2,
+   "name": "fanyi",
+   "permissions": [ "contextMenus", "tabs", "cookies",  "webRequest", "storage" ],
+   "version": "2.1.1",
+   "web_accessible_resources": [ "assets/*" ]
+}
